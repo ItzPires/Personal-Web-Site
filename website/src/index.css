@@ -11,3 +11,82 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.img-responsive {
+  max-width: 75%; /* Garante que a imagem não exceda a largura da coluna */
+  height: auto; /* Mantém a proporção da imagem */
+
+  /* Centraliza a imagem horizontalmente */
+  margin-left: 10%
+}
+
+#chavena {
+  width: 60%;
+  height: auto;
+  display: block;
+  /* Posicione a imagem na coluna 1 usando porcentagens */
+  margin-top: 22%;
+  margin-left: 18%;
+}
+
+#viseu {
+  width: 40%;
+  height: auto;
+  display: block;
+  rotate: -5deg;
+  /* Posicione a imagem na coluna 2 usando porcentagens */
+  margin-top: 5%;
+  margin-left: 60%;
+}
+
+#dei {
+  width: 40%;
+  height: auto;
+  display: block;
+  /* Posicione a imagem na coluna 3 usando porcentagens */
+  margin-top: 3%;
+  margin-left: 35%;
+}
+
+#lua {
+  width: 23%;
+  height: auto;
+  display: block;
+  rotate: -25deg;
+  /* Posicione a imagem na coluna 4 usando porcentagens */
+  margin-top: 3%;
+  margin-left: 60%;
+}
+
+#botanico {
+  width: 80%;
+  height: auto;
+  display: block;
+  /* Posicione a imagem na coluna 5 usando porcentagens */
+  margin-top: 3%;
+  margin-left: -15%;
+}
+
+#matrecos {
+  width: 60%;
+  height: auto;
+  display: block;
+  /* Posicione a imagem na coluna 6 usando porcentagens */
+  margin-top: 3%;
+  margin-left: 7%;
+}
+
+@font-face {
+  font-family: 'ecoplanet'; /* Escolha um nome para a fonte */
+  src: url('fonts/ECOPLANET.ttf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'ecoplanet', sans-serif; /* Use o mesmo nome definido na regra @font-face */
+}
+
+.grafiti {
+  font-size: 128px !important; /* Use !important para garantir prioridade */
+}
