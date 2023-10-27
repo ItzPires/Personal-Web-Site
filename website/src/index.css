@@ -13,11 +13,11 @@ code {
 }
 
 .img-responsive {
-  max-width: 75%; /* Garante que a imagem não exceda a largura da coluna */
+  max-width: 70%; /* Garante que a imagem não exceda a largura da coluna */
   height: auto; /* Mantém a proporção da imagem */
 
   /* Centraliza a imagem horizontalmente */
-  margin-left: 10%
+  margin-left: 15%;
 }
 
 #chavena {
@@ -76,6 +76,15 @@ code {
   margin-left: 7%;
 }
 
+#banho {
+  width: 60%;
+  height: auto;
+  display: block;
+  /* Posicione a imagem na coluna 7 usando porcentagens */
+  margin-top: 3%;
+  margin-left: 20%;
+}
+
 @font-face {
   font-family: 'ecoplanet'; /* Escolha um nome para a fonte */
   src: url('fonts/ECOPLANET.ttf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
@@ -84,9 +93,45 @@ code {
 }
 
 h1 {
-  font-family: 'ecoplanet', sans-serif; /* Use o mesmo nome definido na regra @font-face */
+  font-family: 'ecoplanet', sans-serif;
 }
 
 .grafiti {
-  font-size: 128px !important; /* Use !important para garantir prioridade */
+  font-size: 96px !important;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.custom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.custom-column {
+  width: 33.33%;
+  padding: 5px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* Modo claro */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Modo escuro */
+.dark-mode-2 {
+  filter: invert(100%);
 }
