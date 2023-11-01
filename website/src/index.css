@@ -85,6 +85,15 @@ code {
   margin-left: 20%;
 }
 
+#telemovel {
+  width: 60%;
+  height: auto;
+  display: block;
+  /* Posicione a imagem na coluna 8 usando porcentagens */
+  margin-top: 3%;
+  margin-left: 20%;
+}
+
 @font-face {
   font-family: 'ecoplanet'; /* Escolha um nome para a fonte */
   src: url('fonts/ECOPLANET.ttf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
@@ -92,8 +101,26 @@ code {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'LemonadeStand'; /* Escolha um nome para a fonte */
+  src: url('fonts/LemonadeStand.ttf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CorethanExtraBold'; /* Escolha um nome para a fonte */
+  src: url('fonts/CorethanExtraBold.otf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
   font-family: 'ecoplanet', sans-serif;
+}
+
+h6,h2 {
+  font-family: 'CorethanExtraBold', sans-serif;
 }
 
 .grafiti {
@@ -134,4 +161,63 @@ h1 {
 /* Modo escuro */
 .dark-mode-2 {
   filter: invert(100%);
+}
+
+#banho:hover {
+  background-image: url('imgs/banho.gif');
+  background-size: cover;
+}
+
+#viseu:hover {
+  background-image: url('imgs/viseu.gif');
+  background-size: cover;
+  animation: playOnce 3s 1; /* Reproduz a animação apenas uma vez */
+}
+
+@keyframes playOnce {
+  to {
+    background-image: none; /* Remove a imagem de fundo após a animação */
+  }
+}
+
+#image-container {
+  position: relative;
+}
+
+#insta {
+  position: absolute;
+  top: 27%;
+  left: 33%;
+  width: 12%;
+  height: 12%;
+  cursor: pointer;
+  rotate: -11deg;
+}
+
+#linkedin {
+  position: absolute;
+  top: 24%;
+  left: 47%;
+  width: 12%;
+  height: 12%;
+  cursor: pointer;
+  rotate: -11deg;
+}
+
+#hora {
+  position: absolute;
+  top: 19%;
+  left: 30%;
+  width: 4%;
+  height: 4%;
+  rotate: -11deg;
+}
+
+#hora2 {
+  position: absolute;
+  top: 24%;
+  left: 42%;
+  width: 12%;
+  height: 12%;
+  rotate: -11deg;
 }
