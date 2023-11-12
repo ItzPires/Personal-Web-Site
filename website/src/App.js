@@ -1,23 +1,39 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import React, { useState, useRef, useEffect } from 'react';
-import eu from './imgs/eu.png';
-import dei from './imgs/dei.png';
-import chavena from './imgs/chavena.png';
-import viseu from './imgs/viseu.png';
-import lua from './imgs/lua.png';
-import botanico from './imgs/botanico.png';
-import matrecos from './imgs/matrecos.png';
-import banho from './imgs/banho-1.png';
-import telemovel from './imgs/telemovel.png';
-import insta from './imgs/insta.jpg';
-import linkedin from './imgs/linkedin.png';
+import CustomModal from './components/asd';
 
 function App() {
   const [modeType, setModeType] = useState('light-mode');
   const [posicaoBola, setPosicaoBola] = useState({ top: 0, left: 0 });
   const bolaRef = useRef(null);
+  const [showSocialMedia, setshowSocialMedia] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [imageModal, setImageModal] = useState("");
 
+  const basePath = './imgs/';
+
+  // Display social media icons in the phone image
+  const handleMouseOver = () => {
+    setshowSocialMedia(true);
+  };
+
+  const handleMouseOut = () => {
+    setshowSocialMedia(false);
+  };
+
+  // Open and close modal
+  const openModal = (image) => {
+    setImageModal(image);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+
+  // Switch between light and dark mode
   const toggleMode = () => {
     if (modeType === 'light-mode') {
       setModeType('dark-mode');
@@ -86,16 +102,6 @@ function App() {
       setImageIndex(0);
     };*/
 
-  const [showLinkedin, setShowLinkedin] = useState(false);
-
-  const handleMouseOver = () => {
-    setShowLinkedin(true);
-  };
-
-  const handleMouseOut = () => {
-    setShowLinkedin(false);
-  };
-
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
@@ -110,31 +116,42 @@ function App() {
   return (
     <div className={`custom-container ${modeType}`}>
       <div className="custom-column">
-        <img src={chavena} alt="chavena" id="chavena" className={`${modeType}-2`} />
-        <img src={viseu} alt="viseu" id="viseu" className={`${modeType}-2`} />
-        <img src={dei} alt="dei" id="dei" className={`${modeType}-2`} />
-        <img src={banho} alt="banho" id="banho" className={`${modeType}-2`} />
+        <img src={basePath + "chavena.png"} onClick={() => openModal("chavena.png")} alt="chavena" id="chavena" className={`${modeType}-2`} />
+        <img src={basePath + "viseu.png"} onClick={() => openModal("viseu.png")} alt="viseu" id="viseu" className={`${modeType}-2`} />
+        <img src={basePath + "dei.png"} onClick={() => openModal("dei.png")} alt="dei" id="dei" className={`${modeType}-2`} />
+        <img src={basePath + "banho-1.png"} onClick={() => openModal("banho.gif")} alt="banho" id="banho" className={`${modeType}-2`} />
       </div>
       <div className="custom-column sticky">
-        <img src={eu} alt="eu" className="img-responsive" />
+        <img src={basePath + "eu.png"} alt="eu" className="img-responsive" />
         <h1 className="grafiti">Samuel Pires</h1>
       </div>
       <div className="custom-column">
-        <img src={lua} alt="lua" id="lua" className={`${modeType}-2`} onClick={toggleMode} />
-        <img src={botanico} alt="botanico" id="botanico" className={`${modeType}-2`} />
-        <img src={matrecos} alt="matrecos" id="matrecos" className={`${modeType}-2`} />
+        <img src={basePath + "lua.png"} alt="lua" id="lua" className={`${modeType}-2`} onClick={toggleMode} />
+        <img src={basePath + "botanico.png"} onClick={() => openModal("botanico.png")} alt="botanico" id="botanico" className={`${modeType}-2`} />
+        <img src={basePath + "matrecos.png"} onClick={() => openModal("matrecos.png")} alt="matrecos" id="matrecos" className={`${modeType}-2`} />
         <div id="image-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-          <img src={telemovel} alt="telemovel" id="telemovel" className={`${modeType}-2`} />
-          {showLinkedin ? (<h6 alt="hora" id="hora">{formattedTime}</h6>) : null}
-          {!showLinkedin ? (<h2 alt="hora" id="hora2">{formattedTime}</h2>) : null}
-          {showLinkedin ? (
-            <a href="https://www.instagram.com/itzpires" target="_blank" rel="noopener noreferrer">
-              <img src={insta} alt="insta" id="insta" className={`${modeType}-2`} />
-            </a>
-          ) : null}
-          {showLinkedin ? (<img src={linkedin} alt="linkedin" id="linkedin" className={`${modeType}-2`} />) : null}
+          <img src={basePath + "telemovel.png"} alt="telemovel" id="telemovel" className={`${modeType}-2`} />
+          {showSocialMedia ? (<h6 alt="hora" id="hora">{formattedTime}</h6>) : null}
+          <div>
+            {!showSocialMedia ? (<h2 alt="hora" id="hora2">{formattedTime}</h2>) : null}
+            {showSocialMedia ? (
+              <a href="https://www.instagram.com/itzpires" target="_blank" rel="noopener noreferrer">
+                <img src={basePath + "insta.jpg"} alt="insta" id="insta" className={`${modeType}-2`} />
+              </a>
+            ) : null}
+            {showSocialMedia ? (
+              <a href="https://www.linkedin.com/in/samuelpires99/" target="_blank" rel="noopener noreferrer">
+                <img src={basePath + "linkedin.png"} alt="linkedin" id="linkedin" className={`${modeType}-2`} />
+              </a>
+            ) : null}
+          </div>
         </div>
       </div>
+      <CustomModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        imageUrl={basePath + imageModal}
+      />
     </div>
   );
 }
