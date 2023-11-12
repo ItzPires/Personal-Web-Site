@@ -1,12 +1,12 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import React, { useState, useRef, useEffect } from 'react';
-import CustomModal from './components/asd';
+import React, { useState, useEffect } from 'react';
+import ModalComponent from './components/Modal';
+import BolaComponent from './components/Bola';
 
 function App() {
   const [modeType, setModeType] = useState('light-mode');
-  const [posicaoBola, setPosicaoBola] = useState({ top: 0, left: 0 });
-  const bolaRef = useRef(null);
+  const [showBall, setShowBall] = useState(false);
   const [showSocialMedia, setshowSocialMedia] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [imageModal, setImageModal] = useState("");
@@ -42,31 +42,7 @@ function App() {
     }
   }
 
-  // Função para gerar coordenadas aleatórias dentro da área visível da tela
-  function gerarCoordenadas() {
-    const larguraTela = window.innerWidth;
-    const alturaTela = window.innerHeight;
-    const larguraBola = bolaRef.current.offsetWidth;
-    const alturaBola = bolaRef.current.offsetHeight;
-    const top = Math.floor(Math.random() * (alturaTela - alturaBola));
-    const left = Math.floor(Math.random() * (larguraTela - larguraBola));
-    return { top, left };
-  }
 
-  function posicionarBola() {
-    const coordenadas = gerarCoordenadas();
-    debugger;
-    setPosicaoBola(coordenadas);
-    var a = posicaoBola;
-    debugger;
-  }
-
-  // Função para animar a bola até um novo local aleatório dentro da área visível da tela
-  function animarBola() {
-    const coordenadas = gerarCoordenadas();
-    bolaRef.current.style.transform = `translate(${coordenadas.left}px, ${coordenadas.top}px)`;
-    setPosicaoBola(coordenadas);
-  }
   /*
     const [imageIndex, setImageIndex] = useState(0);
   
@@ -115,6 +91,8 @@ function App() {
 
   return (
     <div className={`custom-container ${modeType}`}>
+      {showBall ? <BolaComponent topInicial={ document.getElementById('matrecos').offsetTop } leftInicial={document.getElementById('matrecos').offsetLeft } /> : null}
+
       <div className="custom-column">
         <img src={basePath + "chavena.png"} onClick={() => openModal("chavena.png")} alt="chavena" id="chavena" className={`${modeType}-2`} />
         <img src={basePath + "viseu.png"} onClick={() => openModal("viseu.png")} alt="viseu" id="viseu" className={`${modeType}-2`} />
@@ -128,7 +106,7 @@ function App() {
       <div className="custom-column">
         <img src={basePath + "lua.png"} alt="lua" id="lua" className={`${modeType}-2`} onClick={toggleMode} />
         <img src={basePath + "botanico.png"} onClick={() => openModal("botanico.png")} alt="botanico" id="botanico" className={`${modeType}-2`} />
-        <img src={basePath + "matrecos.png"} onClick={() => openModal("matrecos.png")} alt="matrecos" id="matrecos" className={`${modeType}-2`} />
+        <img src={basePath + "matrecos.png"} onClick={() => setShowBall(true)} alt="matrecos" id="matrecos" className={`${modeType}-2`} />
         <div id="image-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
           <img src={basePath + "telemovel.png"} alt="telemovel" id="telemovel" className={`${modeType}-2`} />
           {showSocialMedia ? (<h6 alt="hora" id="hora">{formattedTime}</h6>) : null}
@@ -147,7 +125,7 @@ function App() {
           </div>
         </div>
       </div>
-      <CustomModal
+      <ModalComponent
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         imageUrl={basePath + imageModal}

@@ -127,6 +127,7 @@ h6,h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  z-index: 0;
 }
 
 .custom-column {
