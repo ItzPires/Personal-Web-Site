@@ -150,16 +150,6 @@ h6,h2 {
   filter: invert(100%);
 }
 
-#banho:hover {
-  background-image: url('../public/imgs/banho.gif');
-  background-size: cover;
-}
-
-#viseu:hover {
-  background-image: url('../public/imgs/viseu.gif');
-  background-size: cover;
-}
-
 #image-container {
   position: relative;
 }

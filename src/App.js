@@ -14,7 +14,7 @@ function App() {
     <div className={`custom-container`}>
       {showBall ? <BolaComponent topInicial={ document.getElementById('matrecos').offsetTop } leftInicial={ document.getElementById('matrecos').offsetLeft } /> : null}
       <div className="custom-column">
-        <ImageComponent basePath={basePath} image="chavena" />
+        <ImageComponent basePath={basePath} image="chavena" mouseOverOn={false}/>
         <ImageComponent basePath={basePath} image="viseu" />
         <ImageComponent basePath={basePath} image="dei" />
         <ImageComponent basePath={basePath} image="banho" />
@@ -26,8 +26,8 @@ function App() {
         </div>
       </div>
       <div className="custom-column">
-        <ImageComponent basePath={basePath} image="botanico" />
-        <ImageComponent basePath={basePath} image="matrecos" onClickFunction={() => {setShowBall(true)}}/>
+        <ImageComponent basePath={basePath} image="botanico" mouseOverOn={false}/>
+        <ImageComponent basePath={basePath} image="matrecos" onClickFunction={() => {setShowBall(true)}} mouseOverOn={false}/>
         <Telemovel basePath={basePath} />
       </div>
     </div>
