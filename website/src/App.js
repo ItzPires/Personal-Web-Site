@@ -100,8 +100,10 @@ function App() {
         <img src={basePath + "banho-1.png"} onClick={() => openModal("banho.gif")} alt="banho" id="banho" className={`${modeType}-2`} />
       </div>
       <div className="custom-column sticky">
-        <img src={basePath + "eu.png"} alt="eu" className="img-responsive" />
-        <h1 className="grafiti">Samuel Pires</h1>
+        <div className="img-container">
+          <img src={basePath + "eu.png"} alt="eu" className="img-responsive" />
+          <h1 className="grafiti">Samuel Pires</h1>
+        </div>
       </div>
       <div className="custom-column">
         <img src={basePath + "lua.png"} alt="lua" id="lua" className={`${modeType}-2`} onClick={toggleMode} />

@@ -12,11 +12,18 @@ code {
     monospace;
 }
 
-.img-responsive {
-  max-width: 70%; /* Garante que a imagem não exceda a largura da coluna */
-  height: auto; /* Mantém a proporção da imagem */
+.img-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  margin-left: 15%;
+.img-responsive {
+  max-width: 70%;
+  height: auto;
 }
 
 #chavena {
@@ -81,7 +88,6 @@ code {
   width: 60%;
   height: auto;
   display: block;
-  /* Posicione a imagem na coluna 8 usando porcentagens */
   margin-top: 3%;
   margin-left: 20%;
 }
@@ -124,20 +130,16 @@ h6,h2 {
 }
 
 .custom-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
   z-index: 0;
-}
-
-.custom-column {
-  width: 33.33%;
-  padding: 5px;
 }
 
 .sticky {
   position: sticky;
-  top: 0;
+  align-self: start;
+  top: 0px;
 }
 
 /* Modo claro */
@@ -208,12 +210,12 @@ h6,h2 {
   rotate: -11deg;
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
-}
-
 @media (max-width: 768px) {
   .custom-container {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    z-index: 0;
   }
 
   .custom-column {
