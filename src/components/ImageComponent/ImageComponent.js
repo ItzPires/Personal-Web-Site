@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ImageComponent.css';
 
-const ImageComponent = ({ basePath, image, onClickFunction, mouseOverOn = true }) => {
+const ImageComponent = ({ basePath, image, onClickFunction, customMouseOver = false, mouseOverOn = true }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
+    const [isCustomMouseOver, setIsCustomMouseOver] = useState(false);
 
     const handleMouseOver = () => {
         setIsMouseOver(true);
@@ -11,6 +12,15 @@ const ImageComponent = ({ basePath, image, onClickFunction, mouseOverOn = true }
     const handleMouseOut = () => {
         setIsMouseOver(false);
     };
+
+    useEffect(() => {
+        if (customMouseOver) {
+            setTimeout(() => {
+                onClickFunction();
+                setIsCustomMouseOver(true);
+            }, 1400);
+        }
+    }, [customMouseOver]);
 
     const currentImage = isMouseOver ? image + ".gif" : image + ".png";
 
@@ -23,7 +33,7 @@ const ImageComponent = ({ basePath, image, onClickFunction, mouseOverOn = true }
             }}
             alt={image}
             onMouseOver={() => {
-                if (mouseOverOn) {
+                if (mouseOverOn && !isCustomMouseOver) {
                     handleMouseOver();
                 }
             }}

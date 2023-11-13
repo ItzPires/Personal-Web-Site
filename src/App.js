@@ -27,7 +27,7 @@ function App() {
       </div>
       <div className="custom-column">
         <ImageComponent basePath={basePath} image="botanico" mouseOverOn={false}/>
-        <ImageComponent basePath={basePath} image="matrecos" onClickFunction={() => {setShowBall(true)}} mouseOverOn={false}/>
+        <ImageComponent basePath={basePath} image="matrecos" onClickFunction={() => {setShowBall(true)}} customMouseOver={true}/>
         <Telemovel basePath={basePath} />
       </div>
     </div>
