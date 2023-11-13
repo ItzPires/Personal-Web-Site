@@ -1,21 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Samuel Pires",
+  "name": "Bem-vindo ao meu site pessoal! Este site foi desenvolvido no âmbito da cadeira de Desenvolvimento Web. Explore meu portfólio e descubra mais sobre mim na forma de uma caricatura interativa!",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
+      "src": "eu1424.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "1424x1424"
     }
   ],
   "start_url": ".",
