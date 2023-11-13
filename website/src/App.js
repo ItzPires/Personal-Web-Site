@@ -77,7 +77,7 @@ function App() {
         <img src={basePath + "chavena.png"} onClick={() => openModal("chavena.png")} alt="chavena" id="chavena" className={`${modeType}-2`} />
         <img src={basePath + "viseu.png"} onClick={() => openModal("viseu.png")} alt="viseu" id="viseu" className={`${modeType}-2`} />
         <img src={basePath + "dei.png"} onClick={() => openModal("dei.png")} alt="dei" id="dei" className={`${modeType}-2`} />
-        <img src={basePath + "banho-1.png"} onClick={() => openModal("banho.gif")} alt="banho" id="banho" className={`${modeType}-2`} />
+        <img src={basePath + "banho.png"} onClick={() => openModal("banho.gif")} alt="banho" id="banho" className={`${modeType}-2`} />
       </div>
       <div className="custom-column sticky">
         <div className="img-container">
