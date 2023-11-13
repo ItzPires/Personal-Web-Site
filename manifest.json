@@ -1,0 +1,15 @@
+{
+  "short_name": "Samuel Pires",
+  "name": "Bem-vindo ao meu site pessoal! Este site foi desenvolvido no âmbito da cadeira de Desenvolvimento Web. Explore meu portfólio e descubra mais sobre mim na forma de uma caricatura interativa!",
+  "icons": [
+    {
+      "src": "eu1424.png",
+      "type": "image/png",
+      "sizes": "1424x1424"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
