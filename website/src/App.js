@@ -1,26 +1,17 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ModalComponent from './components/Modal';
 import BolaComponent from './components/Bola';
+import Telemovel from './components/Telemovel/Telemovel';
 
 function App() {
   const [modeType, setModeType] = useState('light-mode');
   const [showBall, setShowBall] = useState(false);
-  const [showSocialMedia, setshowSocialMedia] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [imageModal, setImageModal] = useState("");
 
   const basePath = './imgs/';
-
-  // Display social media icons in the phone image
-  const handleMouseOver = () => {
-    setshowSocialMedia(true);
-  };
-
-  const handleMouseOut = () => {
-    setshowSocialMedia(false);
-  };
 
   // Open and close modal
   const openModal = (image) => {
@@ -78,17 +69,6 @@ function App() {
       setImageIndex(0);
     };*/
 
-  const [currentTime, setCurrentTime] = useState(new Date());
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const formattedTime = `${currentTime.getHours().toString().padStart(2, '0')}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
-
   return (
     <div className={`custom-container ${modeType}`}>
       {showBall ? <BolaComponent topInicial={ document.getElementById('matrecos').offsetTop } leftInicial={document.getElementById('matrecos').offsetLeft } /> : null}
@@ -109,23 +89,7 @@ function App() {
         <img src={basePath + "lua.png"} alt="lua" id="lua" className={`${modeType}-2`} onClick={toggleMode} />
         <img src={basePath + "botanico.png"} onClick={() => openModal("botanico.png")} alt="botanico" id="botanico" className={`${modeType}-2`} />
         <img src={basePath + "matrecos.png"} onClick={() => setShowBall(true)} alt="matrecos" id="matrecos" className={`${modeType}-2`} />
-        <div id="image-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-          <img src={basePath + "telemovel.png"} alt="telemovel" id="telemovel" className={`${modeType}-2`} />
-          {showSocialMedia ? (<h6 alt="hora" id="hora">{formattedTime}</h6>) : null}
-          <div>
-            {!showSocialMedia ? (<h2 alt="hora" id="hora2">{formattedTime}</h2>) : null}
-            {showSocialMedia ? (
-              <a href="https://www.instagram.com/itzpires" target="_blank" rel="noopener noreferrer">
-                <img src={basePath + "insta.jpg"} alt="insta" id="insta" className={`${modeType}-2`} />
-              </a>
-            ) : null}
-            {showSocialMedia ? (
-              <a href="https://www.linkedin.com/in/samuelpires99/" target="_blank" rel="noopener noreferrer">
-                <img src={basePath + "linkedin.png"} alt="linkedin" id="linkedin" className={`${modeType}-2`} />
-              </a>
-            ) : null}
-          </div>
-        </div>
+        <Telemovel basePath={basePath} modeType={modeType} />
       </div>
       <ModalComponent
         isOpen={modalIsOpen}

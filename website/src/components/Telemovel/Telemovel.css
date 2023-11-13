@@ -1,0 +1,55 @@
+#telemovel {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-top: 3%;
+    margin-left: 20%;
+}
+
+#insta {
+    position: absolute;
+    top: 27%;
+    left: 33%;
+    width: 12%;
+    height: 12%;
+    cursor: pointer;
+    rotate: -11deg;
+}
+
+#linkedin {
+    position: absolute;
+    top: 24%;
+    left: 47%;
+    width: 12%;
+    height: 12%;
+    cursor: pointer;
+    rotate: -11deg;
+}
+
+#hora {
+    position: absolute;
+    top: 19%;
+    left: 30%;
+    width: 4%;
+    height: 4%;
+    rotate: -11deg;
+}
+
+#hora2 {
+    position: absolute;
+    top: 24%;
+    left: 42%;
+    width: 12%;
+    height: 12%;
+    rotate: -11deg;
+}
+
+@media (max-width: 768px) {
+    #telemovel {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin-top: 3%;
+        margin-left: 20%;
+    }
+}

@@ -84,14 +84,6 @@ code {
   margin-left: 20%;
 }
 
-#telemovel {
-  width: 60%;
-  height: auto;
-  display: block;
-  margin-top: 3%;
-  margin-left: 20%;
-}
-
 @font-face {
   font-family: 'ecoplanet'; /* Escolha um nome para a fonte */
   src: url('fonts/ECOPLANET.ttf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
@@ -172,44 +164,6 @@ h6,h2 {
   position: relative;
 }
 
-#insta {
-  position: absolute;
-  top: 27%;
-  left: 33%;
-  width: 12%;
-  height: 12%;
-  cursor: pointer;
-  rotate: -11deg;
-}
-
-#linkedin {
-  position: absolute;
-  top: 24%;
-  left: 47%;
-  width: 12%;
-  height: 12%;
-  cursor: pointer;
-  rotate: -11deg;
-}
-
-#hora {
-  position: absolute;
-  top: 19%;
-  left: 30%;
-  width: 4%;
-  height: 4%;
-  rotate: -11deg;
-}
-
-#hora2 {
-  position: absolute;
-  top: 24%;
-  left: 42%;
-  width: 12%;
-  height: 12%;
-  rotate: -11deg;
-}
-
 @media (max-width: 768px) {
   .custom-container {
     display: grid;
@@ -230,7 +184,7 @@ h6,h2 {
     position: absolute;
     width: 50%;
     height: auto;
-    margin-top: 135%;
+    margin-top: 120%;
     margin-left: 7%;
   }
   
@@ -239,7 +193,7 @@ h6,h2 {
     position: absolute;
     width: 35%;
     height: auto;
-    margin-top: 145%;
+    margin-top: 130%;
     margin-left: 50%;
   }
   
@@ -247,7 +201,7 @@ h6,h2 {
     position: absolute;
     width: 30%;
     height: auto;
-    margin-top: 160%;
+    margin-top: 145%;
     margin-left: 15%;
   }
 
@@ -255,7 +209,7 @@ h6,h2 {
     position: absolute;
     width: 55%;
     height: auto;
-    margin-top: 170%;
+    margin-top: 155%;
     margin-left: 50%;
   }
   
@@ -273,7 +227,7 @@ h6,h2 {
     width: 80%;
     height: auto;
     display: block;
-    margin-top: 60%;
+    margin-top: 65%;
     margin-left: 10%;
   }
   
@@ -283,14 +237,6 @@ h6,h2 {
     display: block;
     margin-top: 0%;
     margin-left: 50%;
-  }
-  
-  #telemovel {
-    width: 60%;
-    height: auto;
-    display: block;
-    margin-top: 3%;
-    margin-left: 20%;
   }
 
   .grafiti {
