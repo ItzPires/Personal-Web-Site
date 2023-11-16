@@ -24,6 +24,7 @@ code {
 .img-responsive {
   max-width: 70%;
   height: auto;
+  margin-left: -5px;
 }
 
 #chavena {
