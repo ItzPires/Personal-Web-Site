@@ -14,20 +14,20 @@ function App() {
     <div className={`custom-container`}>
       {showBall ? <BolaComponent topInicial={ document.getElementById('matrecos').offsetTop } leftInicial={ document.getElementById('matrecos').offsetLeft } /> : null}
       <div className="custom-column">
-        <ImageComponent basePath={basePath} image="chavena" mouseOverOn={false}/>
+        <ImageComponent basePath={basePath} image="chavena" mouseOverOn={false} />
         <ImageComponent basePath={basePath} image="viseu" />
         <ImageComponent basePath={basePath} image="dei" />
         <ImageComponent basePath={basePath} image="banho" />
       </div>
       <div className="custom-column sticky">
         <div className="img-container">
-          <img src={basePath + "eu.png"} alt="eu" className="img-responsive" />
+          <ImageComponent basePath={basePath} image="eu" mouseOverOn={false} customClassName={"img-responsive"} />
           <h1 className="grafiti">Samuel Pires</h1>
         </div>
       </div>
       <div className="custom-column">
-        <ImageComponent basePath={basePath} image="botanico" mouseOverOn={false}/>
-        <ImageComponent basePath={basePath} image="matrecos" onClickFunction={() => {setShowBall(true)}} customMouseOver={true}/>
+        <ImageComponent basePath={basePath} image="botanico" mouseOverOn={false} />
+        <ImageComponent basePath={basePath} image="matrecos" onClickFunction={() => { setShowBall(true) }} customMouseOver={true} />
         <Telemovel basePath={basePath} />
       </div>
     </div>

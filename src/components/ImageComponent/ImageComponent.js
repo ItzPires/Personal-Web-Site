@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ImageComponent.css';
 
-const ImageComponent = ({ basePath, image, onClickFunction, customMouseOver = false, mouseOverOn = true }) => {
+const ImageComponent = ({ basePath, image, onClickFunction, customClassName, customMouseOver = false, mouseOverOn = true }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
     const [isCustomMouseOver, setIsCustomMouseOver] = useState(false);
 
@@ -38,7 +38,10 @@ const ImageComponent = ({ basePath, image, onClickFunction, customMouseOver = fa
                 }
             }}
             onMouseOut={handleMouseOut}
-            id={image} />
+            id={image}
+            className={`${customClassName ? customClassName : ''
+                }`}
+        />
     );
 };
 
