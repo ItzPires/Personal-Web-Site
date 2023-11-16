@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import React, { useState } from 'react';
-import BolaComponent from './components/Bola';
+import BolaComponent from './components/Bola/Bola';
 import Telemovel from './components/Telemovel/Telemovel';
 import ImageComponent from './components/ImageComponent/ImageComponent';
 

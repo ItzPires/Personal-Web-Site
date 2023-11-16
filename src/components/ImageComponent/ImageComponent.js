@@ -3,7 +3,7 @@ import './ImageComponent.css';
 
 const ImageComponent = ({ basePath, image, onClickFunction, customClassName, customMouseOver = false, mouseOverOn = true }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
-    const [isCustomMouseOver, setIsCustomMouseOver] = useState(false);
+    const [isCustomMouseOverDone, setIsCustomMouseOverDone] = useState(false);
 
     const handleMouseOver = () => {
         setIsMouseOver(true);
@@ -12,15 +12,6 @@ const ImageComponent = ({ basePath, image, onClickFunction, customClassName, cus
     const handleMouseOut = () => {
         setIsMouseOver(false);
     };
-
-    useEffect(() => {
-        if (customMouseOver) {
-            setTimeout(() => {
-                onClickFunction();
-                setIsCustomMouseOver(true);
-            }, 1400);
-        }
-    }, [customMouseOver]);
 
     const currentImage = isMouseOver ? image + ".gif" : image + ".png";
 
@@ -33,8 +24,20 @@ const ImageComponent = ({ basePath, image, onClickFunction, customClassName, cus
             }}
             alt={image}
             onMouseOver={() => {
-                if (mouseOverOn && !isCustomMouseOver) {
-                    handleMouseOver();
+                if (mouseOverOn) {
+                    if (customMouseOver) {
+                        if (!isCustomMouseOverDone) {
+                            handleMouseOver();
+
+                            setTimeout(() => {
+                                onClickFunction();
+                                setIsCustomMouseOverDone(true);
+                            }, 900);
+                        }
+                    }
+                    else {
+                        handleMouseOver();
+                    }
                 }
             }}
             onMouseOut={handleMouseOut}
