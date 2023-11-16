@@ -1,107 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.img-container {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.img-responsive {
-  max-width: 70%;
-  height: auto;
-  margin-left: -5px;
-}
-
-#chavena {
-  width: 60%;
-  height: auto;
-  display: block;
-  margin-top: 22%;
-  margin-left: 18%;
-}
-
-#viseu {
-  width: 40%;
-  height: auto;
-  display: block;
-  rotate: -5deg;
-  margin-top: 5%;
-  margin-left: 60%;
-}
-
-#dei {
-  width: 40%;
-  height: auto;
-  display: block;
-  margin-top: 3%;
-  margin-left: 35%;
-}
-
-#lua {
-  width: 23%;
-  height: auto;
-  display: block;
-  rotate: -25deg;
-  margin-top: 3%;
-  margin-left: 60%;
-}
-
-#botanico {
-  width: 80%;
-  height: auto;
-  display: block;
-  margin-top: 3%;
-  margin-left: -15%;
-}
-
-#matrecos {
-  width: 60%;
-  height: auto;
-  display: block;
-  margin-top: 3%;
-  margin-left: 7%;
-}
-
-#banho {
-  width: 60%;
-  height: auto;
-  display: block;
-  margin-top: 10%;
-  margin-left: 20%;
-}
-
 @font-face {
-  font-family: 'ecoplanet'; /* Escolha um nome para a fonte */
-  src: url('fonts/ECOPLANET.ttf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
+  font-family: 'ecoplanet';
+  src: url('fonts/ECOPLANET.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'LemonadeStand'; /* Escolha um nome para a fonte */
-  src: url('fonts/LemonadeStand.ttf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
+  font-family: 'LemonadeStand';
+  src: url('fonts/LemonadeStand.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CorethanExtraBold'; /* Escolha um nome para a fonte */
-  src: url('fonts/CorethanExtraBold.otf') format('truetype'); /* Substitua o formato e o caminho conforme necessário */
+  font-family: 'CorethanExtraBold';
+  src: url('fonts/CorethanExtraBold.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -110,136 +23,7 @@ h1 {
   font-family: 'ecoplanet', sans-serif;
 }
 
-h6,h2 {
+h6,
+h2 {
   font-family: 'CorethanExtraBold', sans-serif;
-}
-
-.grafiti {
-  font-size: 6vw !important;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  white-space: nowrap;
-}
-
-.custom-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  position: relative;
-  z-index: 0;
-}
-
-.sticky {
-  position: sticky;
-  align-self: start;
-  top: 0px;
-}
-
-/* Modo claro */
-.light-mode {
-  background-color: white;
-  color: black;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
-/* Modo escuro */
-.dark-mode-2 {
-  filter: invert(100%);
-}
-
-#image-container {
-  position: relative;
-}
-
-@media (max-width: 768px) {
-  .custom-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    position: relative;
-    z-index: 0;
-  }
-
-  .img-container {
-    height: auto;
-  }
-
-  .custom-column {
-    width: 100%;
-  }
-  
-  .sticky {
-    position: static;
-  }
-
-  #chavena {
-    position: absolute;
-    width: 50%;
-    height: auto;
-    margin-top: 135%;
-    margin-left: 7%;
-  }
-  
-  #viseu {
-    rotate: -5deg;
-    position: absolute;
-    width: 35%;
-    height: auto;
-    margin-top: 140%;
-    margin-left: 50%;
-  }
-  
-  #dei {
-    position: absolute;
-    width: 30%;
-    height: auto;
-    margin-top: 163%;
-    margin-left: 15%;
-  }
-
-  #banho {
-    position: absolute;
-    width: 55%;
-    height: auto;
-    margin-top: 170%;
-    margin-left: 50%;
-  }
-  
-  #lua {
-    width: 23%;
-    height: auto;
-    display: block;
-    rotate: -25deg;
-    margin-top: 5%;
-    margin-left: 60%;
-  }
-  
-  #botanico {
-    width: 80%;
-    height: auto;
-    display: block;
-    margin-top: 85%;
-    margin-left: 10%;
-  }
-  
-  #matrecos {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin-top: 0%;
-    margin-left: 50%;
-  }
-
-  .grafiti {
-    font-size: 12vw !important;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    white-space: nowrap;
-    text-align: center;
-  }
-  
 }
