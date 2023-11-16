@@ -18,7 +18,7 @@ const ImageComponent = ({ basePath, image, onClickFunction, customClassName, cus
     return (
         <img src={basePath + currentImage}
             onClick={() => {
-                if (onClickFunction) {
+                if (onClickFunction && !customMouseOver) {
                     onClickFunction();
                 }
             }}
