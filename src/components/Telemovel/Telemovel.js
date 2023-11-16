@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Telemovel.css';
+import ImageComponent from '../ImageComponent/ImageComponent';
 
-const Telemovel = ({ basePath }) => {
+const Telemovel = ({ basePath, onLoadFuncion }) => {
   const [showSocialMedia, setShowSocialMedia] = useState(false);
 
   const handleMouseOver = () => {
@@ -25,7 +26,7 @@ const Telemovel = ({ basePath }) => {
 
   return (
     <div id="image-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-      <img src={basePath + "telemovel.png"} alt="telemovel" id="telemovel" />
+      <ImageComponent basePath={basePath} image="telemovel" mouseOverOn={false} onLoadFuncion={() => { onLoadFuncion() }} />
       {showSocialMedia ? (<h6 alt="hora" id="hora">{formattedTime}</h6>) : null}
       <div>
         {!showSocialMedia ? (<h2 alt="hora" id="hora2">{formattedTime}</h2>) : null}
