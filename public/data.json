@@ -1,0 +1,44 @@
+{
+    "eu": {
+        "titulo": "Sobre Mim",
+        "descricao": "Eu sou uma pessoa interessada em várias áreas, incluindo programação, design e música.",
+        "png": "/imgs/eu.png",
+        "gif": "/imgs/eu.gif"
+    },
+    "chavena": {
+        "titulo": "Chávena",
+        "descricao": "Adoro tomar café pela manhã em uma chávena bonita, especialmente se tiver algum desenho especial.",
+        "png": "/imgs/chavena.png",
+        "gif": "/imgs/chavena.gif"
+    },
+    "viseu": {
+        "titulo": "Viseu",
+        "descricao": "Viseu é uma cidade encantadora em Portugal, conhecida por sua arquitetura histórica e cultura rica.",
+        "png": "/imgs/viseu.png",
+        "gif": "/imgs/viseu.gif"
+    },
+    "dei": {
+        "titulo": "DEI",
+        "descricao": "Estudo no Departamento de Engenharia Informática (DEI), onde aprendo sobre diversas tecnologias e programação.",
+        "png": "/imgs/dei.png",
+        "gif": "/imgs/dei.gif"
+    },
+    "banho": {
+        "titulo": "Banho",
+        "descricao": "Um bom banho é essencial para começar o dia com energia. Gosto de usar produtos com fragrâncias agradáveis.",
+        "png": "/imgs/banho.png",
+        "gif": "/imgs/banho.gif"
+    },
+    "botanico": {
+        "titulo": "Jardim Botânico",
+        "descricao": "O jardim botânico é um lugar relaxante onde posso apreciar a beleza das plantas e a natureza.",
+        "png": "/imgs/botanico.png",
+        "gif": "/imgs/botanico.gif"
+    },
+    "matrecos": {
+        "titulo": "Matraquilhos",
+        "descricao": "Jogar matraquilhos é uma atividade divertida que gosto de fazer com amigos nas horas de lazer.",
+        "png": "/imgs/matrecos.png",
+        "gif": "/imgs/matrecos.gif"
+    }
+}
