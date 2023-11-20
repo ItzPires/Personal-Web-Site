@@ -2,51 +2,51 @@
     "eu": {
         "titulo": "Eu",
         "descricao": "Este sou eu, Samuel Pires!\n Nasci no dia 19 de Dezembro de 1999",
-        "png": "/imgs/eu.png",
-        "gif": "/imgs/eu.gif"
+        "png": "./imgs/eu.png",
+        "gif": "./imgs/eu.gif"
     },
     "chavena": {
         "titulo": "\"Procuro uma Chávena!!!\"",
         "descricao": "Um pequeno trocadilho com o meu nome, \"Pires\".",
-        "png": "/imgs/chavena.png",
-        "gif": "/imgs/chavena.gif"
+        "png": "./imgs/chavena.png",
+        "gif": "./imgs/chavena.gif"
     },
     "viseu": {
         "titulo": "Viseu",
         "descricao": "\"A terra que me viu nascer, lembro-me de um menino que andava sozinho, Sonhava vir um dia a ser, Sonhava ser\" Engenheiro Informático.",
-        "png": "/imgs/viseu.png",
-        "gif": "/imgs/viseu.gif"
+        "png": "./imgs/viseu.png",
+        "gif": "./imgs/viseu.gif"
     },
     "dei": {
         "titulo": "A minha segunda casa",
         "descricao": "O DEI, onde estudo, é a minha segunda casa. Não foi a minha primeira escolha, mas como custuma dizer, \"Há males que vêm por bem\". Aqui estudo Engenharia Informática.",
-        "png": "/imgs/dei.png",
-        "gif": "/imgs/dei.gif"
+        "png": "./imgs/dei.png",
+        "gif": "./imgs/dei.gif"
     },
     "banho": {
         "titulo": "\"Está FRIAAAAA!!!\"",
         "descricao": "E a culpa é do meu senhorio que não arranja a caldeira!!!!",
-        "png": "/imgs/banho.png",
-        "gif": "/imgs/banho.gif"
+        "png": "./imgs/banho.png",
+        "gif": "./imgs/banho.gif"
     },
     "botanico": {
         "titulo": "\"Um dia temos que ir ao Botânico\"",
         "descricao": "\"Um dia temos que ir ao Botânico\", uma frase mitica que se tornou num meme entre os meus amigos. Sempre que saiamos e passassemos pelo Jardim Botânico, dizia sempre esta frase que se tornou numa frase mitica nas nossas saidas.",
-        "png": "/imgs/botanico.png",
-        "gif": "/imgs/botanico.gif"
+        "png": "./imgs/botanico.png",
+        "gif": "./imgs/botanico.gif"
     },
     "matrecos": {
         "titulo": "Matraquilhos",
         "descricao": "90% do meu tempo no DEI é passado, com os meus amigos, a jogar matraquilhos. (Execpto quando o DEI não está em obras)\nOs outros 10% são passados a \"ir a saulas\".",
-        "png": "/imgs/matrecos.png",
-        "gif": "/imgs/matrecos.gif",
-        "gifLoop": "/imgs/matrecosLoop.gif"
+        "png": "./imgs/matrecos.png",
+        "gif": "./imgs/matrecos.gif",
+        "gifLoop": "./imgs/matrecosLoop.gif"
     },
     "telemovel": {
-        "png": "/imgs/telemovel.png",
+        "png": "./imgs/telemovel.png",
         "insta": "https://www.instagram.com/itzpires/",
         "linkedin": "https://www.linkedin.com/in/samuelpires99/",
-        "instaImage": "/imgs/insta.jpg",
-        "linkedinImage": "/imgs/linkedin.png"
+        "instaImage": "./imgs/insta.jpg",
+        "linkedinImage": "./imgs/linkedin.png"
     }
 }
