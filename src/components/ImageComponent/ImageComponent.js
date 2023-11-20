@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ModalComponent from '../Modal/Modal';
 import './ImageComponent.css';
 
-const ImageComponent = ({ basePath, image, onClickFunction, customClassName, customMouseOver = false, mouseOverOn = true }) => {
+const ImageComponent = ({ data, image, onClickFunction, customClassName, customMouseOver = false, mouseOverOn = true }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
     const [isCustomMouseOverDone, setIsCustomMouseOverDone] = useState(false);
     const [openModal, setOpenModal] = useState(false);
@@ -15,11 +15,11 @@ const ImageComponent = ({ basePath, image, onClickFunction, customClassName, cus
         setIsMouseOver(false);
     };
 
-    const currentImage = isMouseOver ? image + ".gif" : image + ".png";
+    const currentImage = isMouseOver ? data.gif : data.png;
 
     return (
         <div>
-            <img src={basePath + currentImage}
+            <img src={currentImage}
                 onClick={() => {
                     setOpenModal(true);
                 }}
@@ -46,7 +46,7 @@ const ImageComponent = ({ basePath, image, onClickFunction, customClassName, cus
                 className={`${customClassName ? customClassName : ''
                     }`}
             />
-            {openModal ? <ModalComponent setModalOpen={() => setOpenModal(!openModal)} image={image}></ModalComponent> : null}
+            {openModal ? <ModalComponent setModalOpen={() => setOpenModal(!openModal)} data={data}></ModalComponent> : null}
         </div>
     );
 };
