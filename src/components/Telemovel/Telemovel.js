@@ -26,7 +26,7 @@ const Telemovel = ({ data, onLoadFuncion }) => {
 
   return (
     <div id="image-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-      <ImageComponent data={data} image="telemovel" mouseOverOn={false} onLoadFuncion={() => { onLoadFuncion() }} />
+      <ImageComponent data={data} image="telemovel" mouseOverOn={false} onLoadFuncion={onLoadFuncion} />
       {showSocialMedia ? (<h6 alt="hora" id="hora">{formattedTime}</h6>) : null}
       <div>
         {!showSocialMedia ? (<h2 alt="hora" id="hora2">{formattedTime}</h2>) : null}
