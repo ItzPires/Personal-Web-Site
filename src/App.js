@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch('/data.json');
+        const response = await fetch('./data.json');
         const dataJson = await response.json();
 
         setData(dataJson);
