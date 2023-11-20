@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Telemovel.css';
 import ImageComponent from '../ImageComponent/ImageComponent';
 
-const Telemovel = ({ basePath, onLoadFuncion }) => {
+const Telemovel = ({ data, onLoadFuncion }) => {
   const [showSocialMedia, setShowSocialMedia] = useState(false);
 
   const handleMouseOver = () => {
@@ -26,18 +26,18 @@ const Telemovel = ({ basePath, onLoadFuncion }) => {
 
   return (
     <div id="image-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-      <ImageComponent basePath={basePath} image="telemovel" mouseOverOn={false} onLoadFuncion={() => { onLoadFuncion() }} />
+      <ImageComponent data={data} image="telemovel" mouseOverOn={false} onLoadFuncion={() => { onLoadFuncion() }} />
       {showSocialMedia ? (<h6 alt="hora" id="hora">{formattedTime}</h6>) : null}
       <div>
         {!showSocialMedia ? (<h2 alt="hora" id="hora2">{formattedTime}</h2>) : null}
         {showSocialMedia ? (
-          <a href="https://www.instagram.com/itzpires" target="_blank" rel="noopener noreferrer">
-            <img src={basePath + "insta.jpg"} alt="insta" id="insta" />
+          <a href={data.insta} target="_blank" rel="noopener noreferrer">
+            <img src={data.instaImage} alt="insta" id="insta" />
           </a>
         ) : null}
         {showSocialMedia ? (
-          <a href="https://www.linkedin.com/in/samuelpires99/" target="_blank" rel="noopener noreferrer">
-            <img src={basePath + "linkedin.png"} alt="linkedin" id="linkedin" />
+          <a href={data.linkedin} target="_blank" rel="noopener noreferrer">
+            <img src={data.linkedinImage} alt="linkedin" id="linkedin" />
           </a>
         ) : null}
       </div>

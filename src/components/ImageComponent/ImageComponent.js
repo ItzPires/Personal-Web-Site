@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import ModalComponent from '../Modal/Modal';
 import './ImageComponent.css';
 
-const ImageComponent = ({ basePath, image, onClickFunction, customMouseOver = false, mouseOverOn = true, onLoadFuncion }) => {
+const ImageComponent = ({ data, image, onClickFunction, customClassName, customMouseOver = false, mouseOverOn = true, onLoadFuncion }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
-    const [isCustomMouseOver, setIsCustomMouseOver] = useState(false);
+    const [isCustomMouseOverDone, setIsCustomMouseOverDone] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
 
     const handleMouseOver = () => {
         setIsMouseOver(true);
@@ -13,37 +15,44 @@ const ImageComponent = ({ basePath, image, onClickFunction, customMouseOver = fa
         setIsMouseOver(false);
     };
 
-    useEffect(() => {
-        if (customMouseOver) {
-            setTimeout(() => {
-                onClickFunction();
-                setIsCustomMouseOver(true);
-            }, 1400);
-        }
-    }, [customMouseOver]);
-
-    const currentImage = isMouseOver ? image + ".gif" : image + ".png";
+    const currentImage = isMouseOver ? data.gif : data.png;
 
     return (
-        <img src={basePath + currentImage}
-            onClick={() => {
-                if (onClickFunction) {
-                    onClickFunction();
-                }
-            }}
-            alt={image}
-            onMouseOver={() => {
-                if (mouseOverOn && !isCustomMouseOver) {
-                    handleMouseOver();
-                }
-            }}
-            onMouseOut={handleMouseOut}
-            onLoad={() => {
-                if (onLoadFuncion) {
-                    onLoadFuncion();
-                }
-            }}
-            id={image} />
+        <div>
+            <img src={currentImage}
+                onClick={() => {
+                    setOpenModal(true);
+                }}
+                alt={image}
+                onMouseOver={() => {
+                    if (mouseOverOn) {
+                        if (customMouseOver) {
+                            if (!isCustomMouseOverDone) {
+                                handleMouseOver();
+
+                                setTimeout(() => {
+                                    onClickFunction();
+                                    setIsCustomMouseOverDone(true);
+                                }, 900);
+                            }
+                        }
+                        else {
+                            handleMouseOver();
+                        }
+                    }
+                }}
+                onMouseOut={handleMouseOut}
+                id={image}
+                onLoad={() => {
+                    if (onLoadFuncion) {
+                        onLoadFuncion();
+                    }
+                }}
+                className={`${customClassName ? customClassName : ''
+                    }`}
+            />
+            {openModal ? <ModalComponent setModalOpen={() => setOpenModal(!openModal)} data={data}></ModalComponent> : null}
+        </div>
     );
 };
 
