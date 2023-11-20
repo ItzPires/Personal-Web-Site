@@ -37,9 +37,10 @@
     },
     "matrecos": {
         "titulo": "Matraquilhos",
-        "descricao": "90% do meu tempo no DEI é passado, com os meus amigos, a jogar matraquilhos. Os outros 10% são passados a \"ir a saulas\".",
+        "descricao": "90% do meu tempo no DEI é passado, com os meus amigos, a jogar matraquilhos. (Execpto quando o DEI não está em obras)\nOs outros 10% são passados a \"ir a saulas\".",
         "png": "/imgs/matrecos.png",
-        "gif": "/imgs/matrecos.gif"
+        "gif": "/imgs/matrecos.gif",
+        "gifLoop": "/imgs/matrecosLoop.gif"
     },
     "telemovel": {
         "png": "/imgs/telemovel.png",
