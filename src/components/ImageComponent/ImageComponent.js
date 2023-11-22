@@ -43,7 +43,7 @@ const ImageComponent = ({ data, image, onClickFunction, customClassName, customM
                 }}
                 onMouseOut={handleMouseOut}
                 id={image}
-                className={`${customClassName ? customClassName + ' scale' : 'scale'
+                className={`${customClassName ? customClassName : 'scale'
                     }`}
             />
             {openModal ? <ModalComponent setModalOpen={() => setOpenModal(!openModal)} data={data}></ModalComponent> : null}

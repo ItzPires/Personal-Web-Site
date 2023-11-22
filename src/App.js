@@ -37,12 +37,12 @@ function App() {
           </div>
           <div className="custom-column sticky">
             <div className="img-container">
-              <ImageComponent data={data.eu} image="eu" mouseOverOn={false} customClassName={"img-responsive"} />
+              <ImageComponent data={data.eu} image="eu" mouseOverOn={false} />
               <h1 className="grafiti">Samuel Pires</h1>
             </div>
           </div>
           <div className="custom-column">
-            <ImageComponent data={data.botanico} image="botanico" mouseOverOn={false} />
+            <ImageComponent data={data.botanico} image="botanico" />
             <ImageComponent data={data.matrecos} image="matrecos" onClickFunction={() => { setShowBall(true) }} customMouseOver={true} />
             <Telemovel data={data.telemovel} />
           </div>

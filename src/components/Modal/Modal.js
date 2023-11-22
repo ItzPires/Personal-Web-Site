@@ -7,7 +7,7 @@ const ModalComponent = ({ setModalOpen, data }) => {
     <div className="background-style" onClick={setModalOpen}>
       <div className="modal-style">
         <div>
-          <img className="img-style" src={data.gifLoop ? data.gifLoop : data.gif } alt={data.titulo} />
+          <img className="img-style" src={data.gifLoop ? data.gifLoop : (data.gif ? data.gif : data.png) } alt={data.titulo} />
         </div>
         <div className="json">
           <h3>{data.titulo}</h3>

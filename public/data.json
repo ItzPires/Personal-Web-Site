@@ -2,8 +2,7 @@
     "eu": {
         "titulo": "Eu",
         "descricao": "Este sou eu, Samuel Pires!\n Nasci no dia 19 de Dezembro de 1999",
-        "png": "./imgs/eu.png",
-        "gif": "./imgs/eu.gif"
+        "png": "./imgs/eu.png"
     },
     "chavena": {
         "titulo": "\"Procuro uma Chávena!!!\"",
@@ -33,7 +32,8 @@
         "titulo": "\"Um dia temos que ir ao Botânico\"",
         "descricao": "\"Um dia temos que ir ao Botânico\", uma frase mitica que se tornou num meme entre os meus amigos. Sempre que saiamos e passassemos pelo Jardim Botânico, dizia sempre esta frase que se tornou numa frase mitica nas nossas saidas.",
         "png": "./imgs/botanico.png",
-        "gif": "./imgs/botanico.gif"
+        "gif": "./imgs/botanico.gif",
+        "gifLoop": "./imgs/botanicoLoop.gif"
     },
     "matrecos": {
         "titulo": "Matraquilhos",
