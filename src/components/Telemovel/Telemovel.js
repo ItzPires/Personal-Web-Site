@@ -24,7 +24,7 @@ const Telemovel = ({ data }) => {
   const formattedTime = `${currentTime.getHours().toString().padStart(2, '0')}:${currentTime.getMinutes().toString().padStart(2, '0')}`;
 
   return (
-    <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+    <div id="image-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       <img src={data.png} alt="telemovel" id="telemovel" />
       {showSocialMedia ? (<h6 alt="hora" id="hora">{formattedTime}</h6>) : null}
       <div>
