@@ -21,7 +21,6 @@ function App() {
         const dataJson = await response.json();
 
         setData(dataJson);
-        debugger;
       } catch (error) {
         console.error('Erro ao carregar dados:', error);
       }
