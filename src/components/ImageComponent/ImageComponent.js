@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ModalComponent from '../Modal/Modal';
 import './ImageComponent.css';
 
 const ImageComponent = ({ data, image, onClickFunction, customClassName, customMouseOver = false, mouseOverOn = true }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
+    const isMouseOverRef = useRef(false);
     const [isCustomMouseOverDone, setIsCustomMouseOverDone] = useState(false);
     const [openModal, setOpenModal] = useState(false);
+
+    useEffect(() => {
+        isMouseOverRef.current = isMouseOver;
+    }, [isMouseOver]);
 
     const handleMouseOver = () => {
         setIsMouseOver(true);
@@ -31,8 +36,10 @@ const ImageComponent = ({ data, image, onClickFunction, customClassName, customM
                                 handleMouseOver();
 
                                 setTimeout(() => {
-                                    onClickFunction();
-                                    setIsCustomMouseOverDone(true);
+                                    if (isMouseOverRef.current) {
+                                        onClickFunction();
+                                        setIsCustomMouseOverDone(true);
+                                    }
                                 }, 900);
                             }
                         }
