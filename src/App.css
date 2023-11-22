@@ -7,12 +7,6 @@
     align-items: center;
 }
 
-.img-responsive {
-    max-width: 70%;
-    height: auto;
-    margin-left: 75px;
-}
-
 .grafiti {
     font-size: 6vw !important;
     bottom: 0;
@@ -32,10 +26,6 @@
     position: sticky;
     align-self: start;
     top: 0px;
-}
-
-#image-container {
-    position: relative;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,17 @@
+#matrecos {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-top: 3%;
+    margin-left: 7%;
+}
+
+@media (max-width: 768px) {
+    #matrecos {
+        width: 50%;
+        height: auto;
+        display: block;
+        margin-top: 0%;
+        margin-left: 50%;
+    }
+}

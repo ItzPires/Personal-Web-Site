@@ -36,6 +36,10 @@
     rotate: -11deg;
 }
 
+#image-container {
+    position: relative;
+}
+
 #hora2 {
     position: absolute;
     top: 24%;

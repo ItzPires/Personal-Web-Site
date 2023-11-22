@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import ModalComponent from '../Modal/Modal';
 import './ImageComponent.css';
 
-const ImageComponent = ({ data, image, onClickFunction, customClassName, customMouseOver = false, mouseOverOn = true, onLoadFuncion }) => {
+const ImageComponent = ({ data, image, onClickFunction, mouseOverOn = true, onLoadFuncion }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
-    const [isCustomMouseOverDone, setIsCustomMouseOverDone] = useState(false);
-    const [openModal, setOpenModal] = useState(false);
 
     const handleMouseOver = () => {
         setIsMouseOver(true);
@@ -21,24 +18,12 @@ const ImageComponent = ({ data, image, onClickFunction, customClassName, customM
         <div>
             <img src={currentImage}
                 onClick={() => {
-                    setOpenModal(true);
+                    onClickFunction(data);
                 }}
                 alt={image}
                 onMouseOver={() => {
                     if (mouseOverOn) {
-                        if (customMouseOver) {
-                            if (!isCustomMouseOverDone) {
-                                handleMouseOver();
-
-                                setTimeout(() => {
-                                    onClickFunction();
-                                    setIsCustomMouseOverDone(true);
-                                }, 900);
-                            }
-                        }
-                        else {
-                            handleMouseOver();
-                        }
+                        handleMouseOver();
                     }
                 }}
                 onMouseOut={handleMouseOut}
@@ -48,10 +33,8 @@ const ImageComponent = ({ data, image, onClickFunction, customClassName, customM
                         onLoadFuncion();
                     }
                 }}
-                className={`${customClassName ? customClassName : ''
-                    }`}
+                className={'scale'}
             />
-            {openModal ? <ModalComponent setModalOpen={() => setOpenModal(!openModal)} data={data}></ModalComponent> : null}
         </div>
     );
 };

@@ -1,51 +1,51 @@
 {
     "eu": {
         "titulo": "Eu",
-        "descricao": "Este sou eu, Samuel Pires!\n Nasci no dia 19 de Dezembro de 1999",
-        "png": "/imgs/eu.png",
-        "gif": "/imgs/eu.gif"
+        "descricao": "Este sou eu, Samuel Pires!\n Nasci em Viseu no dia 19 de Dezembro de 1999. Vou-te resumir quem sou eu:\nEstou a tirar um mestrado\nVou muitas vezes ao DEI quando não está em obras\nUm dia espero entrar no Botânico\nNão gosto muito de água fria\nE sou um \"Pires\" sem chávena",
+        "png": "./imgs/eu.png"
     },
     "chavena": {
         "titulo": "\"Procuro uma Chávena!!!\"",
-        "descricao": "Um pequeno trocadilho com o meu nome, \"Pires\".",
-        "png": "/imgs/chavena.png",
-        "gif": "/imgs/chavena.gif"
+        "descricao": "Um pequeno trocadilho com o meu nome, \"Pires\" e pelo facto de em pleno 2023 ainda não ter uma namorada.\nPara quem não sabe, um pires é o prato onde se coloca a chávena.",
+        "png": "./imgs/chavena.png",
+        "gif": "./imgs/chavena.gif"
     },
     "viseu": {
         "titulo": "Viseu",
-        "descricao": "\"A terra que me viu nascer, lembro-me de um menino que andava sozinho, Sonhava vir um dia a ser, Sonhava ser\" Engenheiro Informático.",
-        "png": "/imgs/viseu.png",
-        "gif": "/imgs/viseu.gif"
+        "descricao": "A terra que viu nascer um \"Pires\" sem chávena. Vá, não moro exatamente em Viseu, mas ao lado, em Mangualde, mas como é uma cidade pequena e ninguem conhece, costumo dizer que sou de Viseu.",
+        "png": "./imgs/viseu.png",
+        "gif": "./imgs/viseu.gif"
     },
     "dei": {
         "titulo": "A minha segunda casa",
-        "descricao": "O DEI, onde estudo, é a minha segunda casa. Não foi a minha primeira escolha, mas como custuma dizer, \"Há males que vêm por bem\". Aqui estudo Engenharia Informática.",
-        "png": "/imgs/dei.png",
-        "gif": "/imgs/dei.gif"
+        "descricao": "O DEI, onde estudo, é a minha segunda casa. Não foi a minha primeira escolha, mas como custuma dizer, \"Há males que vêm por bem\". Aqui tirei a licenciatura em Engenharia Informática e neste momento estou a tirar o mestrado em Engenharia Informática no ramo de Comunicações, Redes e Serviços. Apesar de tanto a licenciatura como o mestrado serem de Engenharia Informática, gosto imenso de outras áreas como a robótica e \"Desenvolvimento Web\".",
+        "png": "./imgs/dei.png",
+        "gif": "./imgs/dei.gif"
     },
     "banho": {
         "titulo": "\"Está FRIAAAAA!!!\"",
-        "descricao": "E a culpa é do meu senhorio que não arranja a caldeira!!!!",
-        "png": "/imgs/banho.png",
-        "gif": "/imgs/banho.gif"
+        "descricao": "E a culpa é do meu senhorio que não arranja a caldeira!!!!\n Um momento que infelizmente já me aconteceu algumas vezes e que marcou a minha licenciatura pois os meus amigos não me deixam esquecer.",
+        "png": "./imgs/banho.png",
+        "gif": "./imgs/banho.gif"
     },
     "botanico": {
         "titulo": "\"Um dia temos que ir ao Botânico\"",
-        "descricao": "\"Um dia temos que ir ao Botânico\", uma frase mitica que se tornou num meme entre os meus amigos. Sempre que saiamos e passassemos pelo Jardim Botânico, dizia sempre esta frase que se tornou numa frase mitica nas nossas saidas.",
-        "png": "/imgs/botanico.png",
-        "gif": "/imgs/botanico.gif"
+        "descricao": "\"Um dia temos que ir ao Botânico\", uma frase mitica que se tornou num meme entre os meus amigos. Sempre que saiamos e passassemos pelo Jardim Botânico, dizia sempre esta frase que se tornou numa frase mitica nas nossas saidas. Reza a lenda que um dia iremos ao Botânico.",
+        "png": "./imgs/botanico.png",
+        "gif": "./imgs/botanico.gif"
     },
     "matrecos": {
         "titulo": "Matraquilhos",
-        "descricao": "90% do meu tempo no DEI é passado, com os meus amigos, a jogar matraquilhos. Os outros 10% são passados a \"ir a saulas\".",
-        "png": "/imgs/matrecos.png",
-        "gif": "/imgs/matrecos.gif"
+        "descricao": "90% do meu tempo no DEI é passado, com os meus amigos, a jogar matraquilhos. (Execpto quando o DEI não está em obras)\nOs outros 10% são passados a \"ir a saulas\".",
+        "png": "./imgs/matrecos.png",
+        "gif": "./imgs/matrecos.gif",
+        "gifLoop": "./imgs/matrecosLoop.gif"
     },
     "telemovel": {
-        "png": "/imgs/telemovel.png",
+        "png": "./imgs/telemovel.png",
         "insta": "https://www.instagram.com/itzpires/",
         "linkedin": "https://www.linkedin.com/in/samuelpires99/",
-        "instaImage": "/imgs/insta.jpg",
-        "linkedinImage": "/imgs/linkedin.png"
+        "instaImage": "./imgs/insta.jpg",
+        "linkedinImage": "./imgs/linkedin.png"
     }
 }

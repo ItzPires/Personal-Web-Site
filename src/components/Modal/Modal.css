@@ -27,6 +27,10 @@
   max-height: 100%;
 }
 
+.json {
+  white-space: pre-line;
+}
+
 @media (max-width: 768px) {
   .modal-style {
     grid-template-columns: 1fr;
