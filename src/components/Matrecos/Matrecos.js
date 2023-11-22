@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ModalComponent from '../Modal/Modal';
-import './ImageComponent.css';
+import './Matrecos.css';
 
-const ImageComponent = ({ data, image, mouseOverOn = true }) => {
+const Matrecos = ({ data, onFunction }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
+    const isMouseOverRef = useRef(false);
     const [openModal, setOpenModal] = useState(false);
+    const [isCustomMouseOverDone, setIsCustomMouseOverDone] = useState(false);
+
+    useEffect(() => {
+        isMouseOverRef.current = isMouseOver;
+    }, [isMouseOver]);
 
     const handleMouseOver = () => {
         setIsMouseOver(true);
@@ -22,14 +28,21 @@ const ImageComponent = ({ data, image, mouseOverOn = true }) => {
                 onClick={() => {
                     setOpenModal(true);
                 }}
-                alt={image}
+                alt={"matrecos"}
                 onMouseOver={() => {
-                    if (mouseOverOn) {
+                    if (!isCustomMouseOverDone) {
                         handleMouseOver();
+
+                        setTimeout(() => {
+                            if (isMouseOverRef.current) {
+                                onFunction();
+                                setIsCustomMouseOverDone(true);
+                            }
+                        }, 900);
                     }
                 }}
                 onMouseOut={handleMouseOut}
-                id={image}
+                id={"matrecos"}
                 className={'scale'}
             />
             {openModal ? <ModalComponent setModalOpen={() => setOpenModal(!openModal)} data={data}></ModalComponent> : null}
@@ -37,4 +50,4 @@ const ImageComponent = ({ data, image, mouseOverOn = true }) => {
     );
 };
 
-export default ImageComponent;
+export default Matrecos;

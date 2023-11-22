@@ -31,14 +31,6 @@
   margin-left: -15%;
 }
 
-#matrecos {
-  width: 60%;
-  height: auto;
-  display: block;
-  margin-top: 3%;
-  margin-left: 7%;
-}
-
 #banho {
   width: 60%;
   height: auto;
@@ -103,13 +95,4 @@
     margin-top: 85%;
     margin-left: 10%;
   }
-
-  #matrecos {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin-top: 0%;
-    margin-left: 50%;
-  }
-
 }

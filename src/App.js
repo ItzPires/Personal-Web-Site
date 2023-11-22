@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import BolaComponent from './components/Bola/Bola';
 import Telemovel from './components/Telemovel/Telemovel';
 import ImageComponent from './components/ImageComponent/ImageComponent';
+import Matrecos from './components/Matrecos/Matrecos';
 
 function App() {
   const [showBall, setShowBall] = useState(false);
@@ -43,7 +44,7 @@ function App() {
           </div>
           <div className="custom-column">
             <ImageComponent data={data.botanico} image="botanico" />
-            <ImageComponent data={data.matrecos} image="matrecos" onClickFunction={() => { setShowBall(true) }} customMouseOver={true} />
+            <Matrecos data={data.matrecos} onFunction={() => { setShowBall(true) }}/>
             <Telemovel data={data.telemovel} />
           </div>
         </div>
