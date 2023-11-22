@@ -4,44 +4,39 @@
     display: block;
     margin-top: 3%;
     margin-left: 20%;
-    rotate: -11deg;
 }
 
 #insta {
-    position: absolute;
-    top: 27%;
-    left: 33%;
-    width: 12%;
-    height: 12%;
-    cursor: pointer;
+    width: 13%;
+    height: auto;
+    display: block;
+    margin-top: 7%;
+    margin-left: 32%;
     rotate: -11deg;
 }
 
 #linkedin {
-    position: absolute;
-    top: 24%;
-    left: 47%;
     width: 12%;
-    height: 12%;
-    cursor: pointer;
+    height: auto;
+    display: block;
+    margin-top: -15%;
+    margin-left: 48%;
     rotate: -11deg;
 }
 
 #hora {
-    position: absolute;
-    top: 19%;
-    left: 30%;
-    width: 4%;
-    height: 4%;
+    height: auto;
+    display: block;
+    margin-top: -75%;
+    margin-left: 30%;
     rotate: -11deg;
 }
 
 #hora2 {
-    position: absolute;
-    top: 24%;
-    left: 42%;
-    width: 12%;
-    height: 12%;
+    height: auto;
+    display: block;
+    margin-top: -60%;
+    margin-left: 42%;
     rotate: -11deg;
 }
 
