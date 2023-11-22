@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ModalComponent from '../Modal/Modal';
 import './Matrecos.css';
 
-const Matrecos = ({ data, onFunction }) => {
+const Matrecos = ({ data, onFunction, onClickFunction }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
     const isMouseOverRef = useRef(false);
-    const [openModal, setOpenModal] = useState(false);
     const [isCustomMouseOverDone, setIsCustomMouseOverDone] = useState(false);
 
     useEffect(() => {
@@ -26,7 +24,7 @@ const Matrecos = ({ data, onFunction }) => {
         <div>
             <img src={currentImage}
                 onClick={() => {
-                    setOpenModal(true);
+                    onClickFunction(data);
                 }}
                 alt={"matrecos"}
                 onMouseOver={() => {
@@ -45,7 +43,6 @@ const Matrecos = ({ data, onFunction }) => {
                 id={"matrecos"}
                 className={'scale'}
             />
-            {openModal ? <ModalComponent setModalOpen={() => setOpenModal(!openModal)} data={data}></ModalComponent> : null}
         </div>
     );
 };

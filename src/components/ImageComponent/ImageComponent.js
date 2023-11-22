@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import ModalComponent from '../Modal/Modal';
 import './ImageComponent.css';
 
-const ImageComponent = ({ data, image, mouseOverOn = true }) => {
+const ImageComponent = ({ data, image, onClickFunction, mouseOverOn = true }) => {
     const [isMouseOver, setIsMouseOver] = useState(false);
-    const [openModal, setOpenModal] = useState(false);
 
     const handleMouseOver = () => {
         setIsMouseOver(true);
@@ -20,7 +18,7 @@ const ImageComponent = ({ data, image, mouseOverOn = true }) => {
         <div>
             <img src={currentImage}
                 onClick={() => {
-                    setOpenModal(true);
+                    onClickFunction(data);
                 }}
                 alt={image}
                 onMouseOver={() => {
@@ -32,7 +30,6 @@ const ImageComponent = ({ data, image, mouseOverOn = true }) => {
                 id={image}
                 className={'scale'}
             />
-            {openModal ? <ModalComponent setModalOpen={() => setOpenModal(!openModal)} data={data}></ModalComponent> : null}
         </div>
     );
 };
